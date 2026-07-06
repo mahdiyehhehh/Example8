@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sweet Delights Bakery | Home-Baked Treats</title>
   <meta name="description" content="Sweet Delights Bakery — home-baked cupcakes, cookies, brownies &amp; custom cakes. One bite, total delight." />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -48,27 +44,22 @@
       },
     };
   </script>
-
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Quicksand', sans-serif; background-color: #FFF9F4; }
     .font-script { font-family: 'Dancing Script', cursive; }
     .font-ticket { font-family: 'Special Elite', monospace; }
-
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.in-view { opacity: 1; transform: translateY(0); }
-
     .floatie { position: absolute; opacity: .55; animation: floaty 7s ease-in-out infinite; pointer-events: none; user-select: none; }
     @keyframes floaty {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-22px) rotate(12deg); }
     }
-
     .dotted-texture {
       background-image: radial-gradient(rgba(255,255,255,0.55) 1.5px, transparent 1.5px);
       background-size: 14px 14px;
     }
-
     .ticket-scallop-top {
       background-image: radial-gradient(circle at 10px -2px, transparent 12px, #FFFDF9 12.5px);
       background-size: 24px 16px;
@@ -81,29 +72,10 @@
       background-position: bottom;
       background-repeat: repeat-x;
     }
-
-    .stitch-border {
-      border: 2px dashed #E4A9BE;
-    }
-
+    .stitch-border { border: 2px dashed #E4A9BE; }
     .accordion-btn[aria-expanded="true"] .chevron { transform: rotate(180deg); }
     .chevron { transition: transform .3s ease; }
-
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
     .option-card.selected { box-shadow: 0 0 0 3px #D63F70; transform: translateY(-2px); }
-
-    .treat-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .treat-card:hover .treat-img {
-      transform: scale(1.08);
-    }
-
     @media (prefers-reduced-motion: reduce) {
       .floatie { animation: none; }
       .reveal { transition: none; opacity: 1; transform: none; }
@@ -134,7 +106,6 @@
   <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-pink-100">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <a href="#home" class="font-script text-2xl sm:text-3xl text-pink-600">Sweet Delights</a>
-
       <ul class="hidden md:flex items-center gap-8 text-sm font-semibold text-plumSoft">
         <li><a href="#story" class="hover:text-pink-600 transition-colors">Our Story</a></li>
         <li><a href="#treats" class="hover:text-pink-600 transition-colors">Treats</a></li>
@@ -142,11 +113,9 @@
         <li><a href="#menu" class="hover:text-pink-600 transition-colors">Menu</a></li>
         <li><a href="#order" class="hover:text-pink-600 transition-colors">How to Order</a></li>
       </ul>
-
       <a href="#build-box" class="hidden md:inline-flex items-center gap-1.5 bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-soft transition-all hover:-translate-y-0.5">
         Sweeten My Day <span>❤️</span>
       </a>
-
       <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-pink-600">
         <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -156,7 +125,6 @@
         </svg>
       </button>
     </nav>
-
     <div id="mobileMenu" class="hidden md:hidden bg-cream border-t border-pink-100 px-6 py-4 space-y-4 text-plumSoft font-semibold">
       <a href="#story" class="block hover:text-pink-600">Our Story</a>
       <a href="#treats" class="block hover:text-pink-600">Treats</a>
@@ -177,47 +145,28 @@
       <span class="floatie text-3xl" style="top:40%; left:92%; animation-delay:1.8s;">🍪</span>
       <span class="floatie text-2xl" style="top:10%; left:48%; animation-delay:2.6s;">💖</span>
     </div>
-
     <div class="relative max-w-4xl mx-auto px-6 text-center">
-      <span class="reveal in-view inline-block text-xs sm:text-sm tracking-[0.25em] uppercase font-semibold text-rosegoldDk bg-white/70 border border-pink-200 rounded-full px-4 py-1.5 mb-6">
-        Baked-with-love ✨
-      </span>
-
-      <h1 class="reveal in-view font-script text-6xl sm:text-7xl md:text-8xl leading-[1.05] text-pink-600 drop-shadow-sm">
-        Sweet <br class="sm:hidden" /> <span class="text-rosegoldDk">Delights</span>
-      </h1>
-
+      <span class="reveal in-view inline-block text-xs sm:text-sm tracking-[0.25em] uppercase font-semibold text-rosegoldDk bg-white/70 border border-pink-200 rounded-full px-4 py-1.5 mb-6">Baked-with-love ✨</span>
+      <h1 class="reveal in-view font-script text-6xl sm:text-7xl md:text-8xl leading-[1.05] text-pink-600 drop-shadow-sm">Sweet <br class="sm:hidden" /> <span class="text-rosegoldDk">Delights</span></h1>
       <p class="reveal in-view mt-6 font-script text-3xl sm:text-4xl text-plum">One Bite, Total Delight 🍪</p>
-
-      <p class="reveal in-view mt-6 max-w-xl mx-auto text-plumSoft text-base sm:text-lg leading-relaxed">
-        Home-baked cupcakes, cookies, brownies &amp; custom cakes made fresh to order. Every treat is mixed, baked and decorated by hand — with a little extra sprinkle of love.
-      </p>
-
+      <p class="reveal in-view mt-6 max-w-xl mx-auto text-plumSoft text-base sm:text-lg leading-relaxed">Home-baked cupcakes, cookies, brownies &amp; custom cakes made fresh to order. Every treat is mixed, baked and decorated by hand — with a little extra sprinkle of love.</p>
       <div class="reveal in-view mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#build-box" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-all hover:-translate-y-1 hover:shadow-lg">
-          Sweeten My Day <span>❤️</span>
-        </a>
-        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-pink-50 text-pink-600 font-bold px-8 py-3.5 rounded-full border-2 border-pink-300 transition-all hover:-translate-y-1">
-          Peek the Menu <span>🧁</span>
-        </a>
+        <a href="#build-box" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-all hover:-translate-y-1 hover:shadow-lg">Sweeten My Day <span>❤️</span></a>
+        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-pink-50 text-pink-600 font-bold px-8 py-3.5 rounded-full border-2 border-pink-300 transition-all hover:-translate-y-1">Peek the Menu <span>🧁</span></a>
       </div>
     </div>
   </section>
 
-  <!-- Story section (photo box removed) -->
+  <!-- Story section: photo box removed entirely -->
   <section id="story" class="py-20 sm:py-28 bg-cream">
     <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <!-- decorative placeholder without photo box -->
+      <!-- left side: decorative placeholder (no photo box, just a subtle visual) -->
       <div class="reveal order-2 md:order-1">
         <div class="relative rounded-[2.5rem] overflow-hidden shadow-card aspect-[4/5] bg-gradient-to-br from-pink-200 via-pink-100 to-rosegold dotted-texture flex items-center justify-center">
-          <span class="text-8xl">🎂</span>
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-3xl shadow-card px-6 py-4 text-center">
-            <p class="font-script text-3xl text-pink-600 leading-none">100%</p>
-            <p class="text-xs font-semibold text-plumSoft tracking-wide mt-1">Home-Baked</p>
-          </div>
+          <span class="text-8xl opacity-70">🎂</span>
         </div>
       </div>
-
+      <!-- right side: story text -->
       <div class="order-1 md:order-2 reveal">
         <span class="font-script text-2xl text-rosegoldDk">Home-based &amp; Handmade</span>
         <h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Our little sweet story</h2>
@@ -229,19 +178,11 @@
           it usually is. Whether it's a birthday, a "just because," or a full party spread, we bake it fresh,
           pack it pretty, and send it out with a little extra sweetness on top.
         </p>
+        <!-- stats without the box – clean text -->
         <div class="mt-8 flex gap-8">
-          <div>
-            <p class="font-script text-4xl text-pink-600">100%</p>
-            <p class="text-sm text-plumSoft font-medium">Made to order</p>
-          </div>
-          <div>
-            <p class="font-script text-4xl text-pink-600">0</p>
-            <p class="text-sm text-plumSoft font-medium">Shortcuts taken</p>
-          </div>
-          <div>
-            <p class="font-script text-4xl text-pink-600">💕</p>
-            <p class="text-sm text-plumSoft font-medium">Extra love always</p>
-          </div>
+          <div><p class="font-script text-4xl text-pink-600">100%</p><p class="text-sm text-plumSoft font-medium">Made to order</p></div>
+          <div><p class="font-script text-4xl text-pink-600">0</p><p class="text-sm text-plumSoft font-medium">Shortcuts taken</p></div>
+          <div><p class="font-script text-4xl text-pink-600">💕</p><p class="text-sm text-plumSoft font-medium">Extra love always</p></div>
         </div>
       </div>
     </div>
@@ -255,71 +196,15 @@
         <h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Signature Treats</h2>
         <p class="mt-4 text-plumSoft">A little taste of everything we love to make — pick your favourite or mix a few together.</p>
       </div>
-
       <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-pink-100 to-pink-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🧁</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Cupcakes &amp; Cakes</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">From $70</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-rosegold to-pink-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🎂</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Custom Cookie Cakes</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">DM for pricing</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-pink-200 to-pink-400 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍪</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Signature Cookies</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">From $75 / half dozen</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-amber-200 to-amber-400 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍫</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Best-Seller Brownies</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">From $60 / half dozen</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-purple-200 to-purple-400 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🎉</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Custom Party Orders</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">DM for pricing</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-pink-100 to-pink-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍭</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Mini Cakesicles</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">From $90</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🔤</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Pull-Apart Letter Cupcakes</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">From $150</p>
-          </div>
-        </div>
-
-        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card">
-          <div class="aspect-square bg-gradient-to-br from-red-200 to-red-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍓</div>
-          <div class="p-4 text-center">
-            <h3 class="font-bold text-plum leading-tight">Chocolate-Dipped Treats</h3>
-            <p class="text-pink-600 text-sm font-semibold mt-1">From $15</p>
-          </div>
-        </div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-pink-100 to-pink-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🧁</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Cupcakes &amp; Cakes</h3><p class="text-pink-600 text-sm font-semibold mt-1">From $70</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-rosegold to-pink-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🎂</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Custom Cookie Cakes</h3><p class="text-pink-600 text-sm font-semibold mt-1">DM for pricing</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-pink-200 to-pink-400 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍪</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Signature Cookies</h3><p class="text-pink-600 text-sm font-semibold mt-1">From $75 / half dozen</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-amber-200 to-amber-400 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍫</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Best-Seller Brownies</h3><p class="text-pink-600 text-sm font-semibold mt-1">From $60 / half dozen</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-purple-200 to-purple-400 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🎉</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Custom Party Orders</h3><p class="text-pink-600 text-sm font-semibold mt-1">DM for pricing</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-pink-100 to-pink-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍭</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Mini Cakesicles</h3><p class="text-pink-600 text-sm font-semibold mt-1">From $90</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🔤</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Pull-Apart Letter Cupcakes</h3><p class="text-pink-600 text-sm font-semibold mt-1">From $150</p></div></div>
+        <div class="reveal group bg-white rounded-3xl shadow-card overflow-hidden transition-transform hover:-translate-y-2 treat-card"><div class="aspect-square bg-gradient-to-br from-red-200 to-red-300 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform">🍓</div><div class="p-4 text-center"><h3 class="font-bold text-plum leading-tight">Chocolate-Dipped Treats</h3><p class="text-pink-600 text-sm font-semibold mt-1">From $15</p></div></div>
       </div>
     </div>
   </section>
@@ -332,56 +217,27 @@
         <h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Build My Treat Box</h2>
         <p class="mt-4 text-plumSoft">Four quick taps and we'll have your order ready to send.</p>
       </div>
-
-      <!-- Progress steps -->
       <div class="mt-12 mb-10 flex items-center justify-center gap-2 sm:gap-4" id="progressBar">
-        <div class="step-dot flex flex-col items-center gap-2" data-step="1">
-          <div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">1</div>
-          <span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Vibe</span>
-        </div>
+        <div class="step-dot flex flex-col items-center gap-2" data-step="1"><div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">1</div><span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Vibe</span></div>
         <div class="h-0.5 w-8 sm:w-16 bg-pink-200 connector" data-connector="1"></div>
-        <div class="step-dot flex flex-col items-center gap-2" data-step="2">
-          <div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">2</div>
-          <span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Flavor</span>
-        </div>
+        <div class="step-dot flex flex-col items-center gap-2" data-step="2"><div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">2</div><span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Flavor</span></div>
         <div class="h-0.5 w-8 sm:w-16 bg-pink-200 connector" data-connector="2"></div>
-        <div class="step-dot flex flex-col items-center gap-2" data-step="3">
-          <div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">3</div>
-          <span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Treat</span>
-        </div>
+        <div class="step-dot flex flex-col items-center gap-2" data-step="3"><div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">3</div><span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Treat</span></div>
         <div class="h-0.5 w-8 sm:w-16 bg-pink-200 connector" data-connector="3"></div>
-        <div class="step-dot flex flex-col items-center gap-2" data-step="4">
-          <div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">4</div>
-          <span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Ticket</span>
-        </div>
+        <div class="step-dot flex flex-col items-center gap-2" data-step="4"><div class="dot w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors">4</div><span class="text-[11px] sm:text-xs font-semibold text-plumSoft">Ticket</span></div>
       </div>
-
-      <!-- Card -->
       <div class="bg-white rounded-[2rem] shadow-card p-6 sm:p-10 reveal">
         <!-- Step 1 -->
         <div class="box-step" data-step-panel="1">
           <h3 class="font-script text-3xl text-plum mb-1">Pick your vibe</h3>
           <p class="text-plumSoft text-sm mb-6">What's the mood for this box?</p>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Pastel Pink">
-              <span class="block w-full h-10 rounded-lg bg-gradient-to-r from-pink-200 to-pink-300 mb-3"></span>
-              <span class="text-sm font-bold text-plum">Pastel Pink 💗</span>
-            </button>
-            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Rose Gold">
-              <span class="block w-full h-10 rounded-lg bg-gradient-to-r from-rosegold to-rosegoldDk mb-3"></span>
-              <span class="text-sm font-bold text-plum">Rose Gold ✨</span>
-            </button>
-            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Birthday Brights">
-              <span class="block w-full h-10 rounded-lg bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 mb-3"></span>
-              <span class="text-sm font-bold text-plum">Birthday Brights 🎉</span>
-            </button>
-            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Custom">
-              <span class="block w-full h-10 rounded-lg border-2 border-dashed border-rosegold mb-3"></span>
-              <span class="text-sm font-bold text-plum">Custom 🎨</span>
-            </button>
+            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Pastel Pink"><span class="block w-full h-10 rounded-lg bg-gradient-to-r from-pink-200 to-pink-300 mb-3"></span><span class="text-sm font-bold text-plum">Pastel Pink 💗</span></button>
+            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Rose Gold"><span class="block w-full h-10 rounded-lg bg-gradient-to-r from-rosegold to-rosegoldDk mb-3"></span><span class="text-sm font-bold text-plum">Rose Gold ✨</span></button>
+            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Birthday Brights"><span class="block w-full h-10 rounded-lg bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 mb-3"></span><span class="text-sm font-bold text-plum">Birthday Brights 🎉</span></button>
+            <button class="option-card vibe-opt bg-blush rounded-2xl p-4 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Custom"><span class="block w-full h-10 rounded-lg border-2 border-dashed border-rosegold mb-3"></span><span class="text-sm font-bold text-plum">Custom 🎨</span></button>
           </div>
         </div>
-
         <!-- Step 2 -->
         <div class="box-step hidden" data-step-panel="2">
           <h3 class="font-script text-3xl text-plum mb-1">Pick your flavor</h3>
@@ -396,228 +252,68 @@
             <button class="option-card flavor-opt bg-blush hover:bg-pink-100 rounded-full px-5 py-2.5 text-sm font-bold text-plum border-2 border-transparent hover:border-pink-300 transition-all" data-value="Strawberry">Strawberry 🍓</button>
           </div>
         </div>
-
         <!-- Step 3 -->
         <div class="box-step hidden" data-step-panel="3">
           <h3 class="font-script text-3xl text-plum mb-1">Pick your treat</h3>
           <p class="text-plumSoft text-sm mb-6">What form should the sweetness take?</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cupcakes">
-              <span class="block text-3xl mb-2">🧁</span>
-              <span class="text-sm font-bold text-plum">Cupcakes</span>
-            </button>
-            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cookies">
-              <span class="block text-3xl mb-2">🍪</span>
-              <span class="text-sm font-bold text-plum">Cookies</span>
-            </button>
-            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Brownies">
-              <span class="block text-3xl mb-2">🍫</span>
-              <span class="text-sm font-bold text-plum">Brownies</span>
-            </button>
-            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Chocolate-Dipped Strawberries">
-              <span class="block text-3xl mb-2">🍓</span>
-              <span class="text-sm font-bold text-plum">Choc-Dipped Strawberries</span>
-            </button>
-            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cakesicles">
-              <span class="block text-3xl mb-2">🍭</span>
-              <span class="text-sm font-bold text-plum">Cakesicles</span>
-            </button>
-            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cookie Cake">
-              <span class="block text-3xl mb-2">🎂</span>
-              <span class="text-sm font-bold text-plum">Cookie Cake</span>
-            </button>
+            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cupcakes"><span class="block text-3xl mb-2">🧁</span><span class="text-sm font-bold text-plum">Cupcakes</span></button>
+            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cookies"><span class="block text-3xl mb-2">🍪</span><span class="text-sm font-bold text-plum">Cookies</span></button>
+            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Brownies"><span class="block text-3xl mb-2">🍫</span><span class="text-sm font-bold text-plum">Brownies</span></button>
+            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Chocolate-Dipped Strawberries"><span class="block text-3xl mb-2">🍓</span><span class="text-sm font-bold text-plum">Choc-Dipped Strawberries</span></button>
+            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cakesicles"><span class="block text-3xl mb-2">🍭</span><span class="text-sm font-bold text-plum">Cakesicles</span></button>
+            <button class="option-card treat-opt bg-blush rounded-2xl p-5 text-center border-2 border-transparent hover:border-pink-300 transition-all" data-value="Cookie Cake"><span class="block text-3xl mb-2">🎂</span><span class="text-sm font-bold text-plum">Cookie Cake</span></button>
           </div>
         </div>
-
         <!-- Step 4: Ticket -->
         <div class="box-step hidden" data-step-panel="4">
           <h3 class="font-script text-3xl text-plum mb-1 text-center">Your sweet order ticket 🎀</h3>
           <p class="text-plumSoft text-sm mb-6 text-center">Here's what we've got — send it our way!</p>
-
           <div class="max-w-sm mx-auto">
             <div class="ticket-scallop-top pt-6"></div>
             <div class="stitch-border border-t-0 border-b-0 bg-[#FFFDF9] px-6 py-6">
               <p class="font-script text-2xl text-pink-600 text-center">Sweet Delights Bakery</p>
               <p class="font-ticket text-[11px] text-center text-plumSoft mt-1 tracking-wide">HOME-BAKED TREATS</p>
               <div class="border-t border-dashed border-pink-200 my-4"></div>
-
               <dl class="font-ticket text-sm space-y-3 text-plum">
-                <div class="flex justify-between gap-4">
-                  <dt class="text-plumSoft">Order #</dt>
-                  <dd id="ticketNumber" class="font-bold">—</dd>
-                </div>
-                <div class="flex justify-between gap-4">
-                  <dt class="text-plumSoft">Date</dt>
-                  <dd id="ticketDate" class="font-bold">—</dd>
-                </div>
+                <div class="flex justify-between gap-4"><dt class="text-plumSoft">Order #</dt><dd id="ticketNumber" class="font-bold">—</dd></div>
+                <div class="flex justify-between gap-4"><dt class="text-plumSoft">Date</dt><dd id="ticketDate" class="font-bold">—</dd></div>
                 <div class="border-t border-dashed border-pink-200 my-2"></div>
-                <div class="flex justify-between gap-4">
-                  <dt class="text-plumSoft">Vibe</dt>
-                  <dd id="ticketVibe" class="font-bold text-right">—</dd>
-                </div>
-                <div class="flex justify-between gap-4">
-                  <dt class="text-plumSoft">Flavor</dt>
-                  <dd id="ticketFlavor" class="font-bold text-right">—</dd>
-                </div>
-                <div class="flex justify-between gap-4">
-                  <dt class="text-plumSoft">Treat</dt>
-                  <dd id="ticketTreat" class="font-bold text-right">—</dd>
-                </div>
+                <div class="flex justify-between gap-4"><dt class="text-plumSoft">Vibe</dt><dd id="ticketVibe" class="font-bold text-right">—</dd></div>
+                <div class="flex justify-between gap-4"><dt class="text-plumSoft">Flavor</dt><dd id="ticketFlavor" class="font-bold text-right">—</dd></div>
+                <div class="flex justify-between gap-4"><dt class="text-plumSoft">Treat</dt><dd id="ticketTreat" class="font-bold text-right">—</dd></div>
               </dl>
-
               <div class="border-t border-dashed border-pink-200 my-4"></div>
               <p class="font-ticket text-[11px] text-center text-plumSoft leading-relaxed">Baked with love, one bite at a time 💕</p>
             </div>
             <div class="ticket-scallop-bottom pb-6"></div>
           </div>
-
           <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a id="sendOrderBtn" href="#order" class="inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-all hover:-translate-y-1">
-              Send My Order <span>💌</span>
-            </a>
-            <button id="startOverBtn" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-pink-50 text-pink-600 font-bold px-8 py-3.5 rounded-full border-2 border-pink-300 transition-all">
-              Start Over
-            </button>
+            <a id="sendOrderBtn" href="#order" class="inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-all hover:-translate-y-1">Send My Order <span>💌</span></a>
+            <button id="startOverBtn" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-pink-50 text-pink-600 font-bold px-8 py-3.5 rounded-full border-2 border-pink-300 transition-all">Start Over</button>
           </div>
         </div>
-
-        <!-- Nav buttons (hidden on step 4) -->
         <div id="boxNavButtons" class="mt-10 flex items-center justify-between">
-          <button id="backBtn" class="text-plumSoft font-semibold text-sm hover:text-pink-600 transition-colors invisible">
-            ← Back
-          </button>
-          <button id="nextBtn" disabled class="inline-flex items-center gap-2 bg-pink-200 text-pink-400 font-bold px-8 py-3 rounded-full transition-all cursor-not-allowed">
-            Next →
-          </button>
+          <button id="backBtn" class="text-plumSoft font-semibold text-sm hover:text-pink-600 transition-colors invisible">← Back</button>
+          <button id="nextBtn" disabled class="inline-flex items-center gap-2 bg-pink-200 text-pink-400 font-bold px-8 py-3 rounded-full transition-all cursor-not-allowed">Next →</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Full Menu & Pricing (accordion) -->
+  <!-- Full Menu & Pricing -->
   <section id="menu" class="py-20 sm:py-28 bg-blush">
     <div class="max-w-3xl mx-auto px-6">
-      <div class="text-center reveal">
-        <span class="font-script text-2xl text-rosegoldDk">Every sweet detail</span>
-        <h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Full Menu &amp; Pricing</h2>
-        <p class="mt-4 text-plumSoft">Tap a category to see what's inside 👇</p>
-      </div>
-
+      <div class="text-center reveal"><span class="font-script text-2xl text-rosegoldDk">Every sweet detail</span><h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Full Menu &amp; Pricing</h2><p class="mt-4 text-plumSoft">Tap a category to see what's inside 👇</p></div>
       <div class="mt-12 space-y-4" id="accordionWrap">
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🧁</span> Cupcakes &amp; Cakes</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5"><span>Mini Cupcakes (half dozen)</span><span class="font-bold text-pink-600">$70</span></li>
-              <li class="flex justify-between py-2.5"><span>Mini Cupcakes (dozen)</span><span class="font-bold text-pink-600">$130</span></li>
-              <li class="flex justify-between py-2.5"><span>Regular Cupcakes (half dozen)</span><span class="font-bold text-pink-600">$90</span></li>
-              <li class="flex justify-between py-2.5"><span>Regular Cupcakes (dozen)</span><span class="font-bold text-pink-600">$170</span></li>
-              <li class="flex justify-between py-2.5"><span>Pull-Apart Letter Cupcakes</span><span class="font-bold text-pink-600">From $150</span></li>
-              <li class="flex justify-between py-2.5"><span>Custom Drip Cake (6")</span><span class="font-bold text-pink-600">From $180</span></li>
-              <li class="flex justify-between py-2.5"><span>Custom Drip Cake (8")</span><span class="font-bold text-pink-600">From $250</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🎂</span> Custom Cookie Cakes</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5"><span>Small Cookie Cake (6")</span><span class="font-bold text-pink-600">From $100</span></li>
-              <li class="flex justify-between py-2.5"><span>Large Cookie Cake (9")</span><span class="font-bold text-pink-600">From $160</span></li>
-              <li class="flex justify-between py-2.5"><span>Fully Themed Cookie Cake</span><span class="font-bold text-pink-600">From $190</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍪</span> Signature Cookies</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5"><span>Half Dozen Decorated Cookies</span><span class="font-bold text-pink-600">$75</span></li>
-              <li class="flex justify-between py-2.5"><span>Dozen Decorated Cookies</span><span class="font-bold text-pink-600">$140</span></li>
-              <li class="flex justify-between py-2.5"><span>Custom Themed Set (6)</span><span class="font-bold text-pink-600">From $85</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍫</span> Best-Seller Brownies</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5"><span>Half Dozen Classic Brownies</span><span class="font-bold text-pink-600">$60</span></li>
-              <li class="flex justify-between py-2.5"><span>Dozen Classic Brownies</span><span class="font-bold text-pink-600">$110</span></li>
-              <li class="flex justify-between py-2.5"><span>Stuffed Brownies (half dozen)</span><span class="font-bold text-pink-600">From $75</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍓</span> Chocolate-Dipped Treats</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5"><span>Dipped Pretzel Rods (each)</span><span class="font-bold text-pink-600">$15</span></li>
-              <li class="flex justify-between py-2.5"><span>Dipped Strawberries (half dozen)</span><span class="font-bold text-pink-600">$80</span></li>
-              <li class="flex justify-between py-2.5"><span>Dipped Marshmallow Pops (each)</span><span class="font-bold text-pink-600">$15</span></li>
-              <li class="flex justify-between py-2.5"><span>Dipped Oreos (each)</span><span class="font-bold text-pink-600">$15</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍭</span> Mini Cakesicles &amp; Cake Pans</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5"><span>Mini Cakesicles (box of 6)</span><span class="font-bold text-pink-600">$90</span></li>
-              <li class="flex justify-between py-2.5"><span>Cake Pops (half dozen)</span><span class="font-bold text-pink-600">$70</span></li>
-              <li class="flex justify-between py-2.5"><span>Themed Cake Pans</span><span class="font-bold text-pink-600">From $95</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🎉</span> Custom Party Orders</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5 gap-4"><span>Full dessert tables, grazing boxes &amp; themed party sets</span><span class="font-bold text-pink-600 text-right shrink-0">Custom quote</span></li>
-            </ul>
-            <p class="text-xs text-plumSoft mt-2">Contact us for your date, guest count &amp; theme for a full quote.</p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal">
-          <button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
-            <span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🎄</span> Seasonal Specials</span>
-            <svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="accordion-panel hidden px-6 pb-6">
-            <ul class="divide-y divide-pink-100 text-sm">
-              <li class="flex justify-between py-2.5 gap-4"><span>Valentine's, Easter, Christmas &amp; holiday exclusives</span><span class="font-bold text-pink-600 text-right shrink-0">Rotates seasonally</span></li>
-            </ul>
-            <p class="text-xs text-plumSoft mt-2">Check back for seasonal specials throughout the year!</p>
-          </div>
-        </div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🧁</span> Cupcakes &amp; Cakes</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5"><span>Mini Cupcakes (half dozen)</span><span class="font-bold text-pink-600">$70</span></li><li class="flex justify-between py-2.5"><span>Mini Cupcakes (dozen)</span><span class="font-bold text-pink-600">$130</span></li><li class="flex justify-between py-2.5"><span>Regular Cupcakes (half dozen)</span><span class="font-bold text-pink-600">$90</span></li><li class="flex justify-between py-2.5"><span>Regular Cupcakes (dozen)</span><span class="font-bold text-pink-600">$170</span></li><li class="flex justify-between py-2.5"><span>Pull-Apart Letter Cupcakes</span><span class="font-bold text-pink-600">From $150</span></li><li class="flex justify-between py-2.5"><span>Custom Drip Cake (6")</span><span class="font-bold text-pink-600">From $180</span></li><li class="flex justify-between py-2.5"><span>Custom Drip Cake (8")</span><span class="font-bold text-pink-600">From $250</span></li></ul></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🎂</span> Custom Cookie Cakes</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5"><span>Small Cookie Cake (6")</span><span class="font-bold text-pink-600">From $100</span></li><li class="flex justify-between py-2.5"><span>Large Cookie Cake (9")</span><span class="font-bold text-pink-600">From $160</span></li><li class="flex justify-between py-2.5"><span>Fully Themed Cookie Cake</span><span class="font-bold text-pink-600">From $190</span></li></ul></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍪</span> Signature Cookies</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5"><span>Half Dozen Decorated Cookies</span><span class="font-bold text-pink-600">$75</span></li><li class="flex justify-between py-2.5"><span>Dozen Decorated Cookies</span><span class="font-bold text-pink-600">$140</span></li><li class="flex justify-between py-2.5"><span>Custom Themed Set (6)</span><span class="font-bold text-pink-600">From $85</span></li></ul></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍫</span> Best-Seller Brownies</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5"><span>Half Dozen Classic Brownies</span><span class="font-bold text-pink-600">$60</span></li><li class="flex justify-between py-2.5"><span>Dozen Classic Brownies</span><span class="font-bold text-pink-600">$110</span></li><li class="flex justify-between py-2.5"><span>Stuffed Brownies (half dozen)</span><span class="font-bold text-pink-600">From $75</span></li></ul></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍓</span> Chocolate-Dipped Treats</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5"><span>Dipped Pretzel Rods (each)</span><span class="font-bold text-pink-600">$15</span></li><li class="flex justify-between py-2.5"><span>Dipped Strawberries (half dozen)</span><span class="font-bold text-pink-600">$80</span></li><li class="flex justify-between py-2.5"><span>Dipped Marshmallow Pops (each)</span><span class="font-bold text-pink-600">$15</span></li><li class="flex justify-between py-2.5"><span>Dipped Oreos (each)</span><span class="font-bold text-pink-600">$15</span></li></ul></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🍭</span> Mini Cakesicles &amp; Cake Pans</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5"><span>Mini Cakesicles (box of 6)</span><span class="font-bold text-pink-600">$90</span></li><li class="flex justify-between py-2.5"><span>Cake Pops (half dozen)</span><span class="font-bold text-pink-600">$70</span></li><li class="flex justify-between py-2.5"><span>Themed Cake Pans</span><span class="font-bold text-pink-600">From $95</span></li></ul></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🎉</span> Custom Party Orders</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5 gap-4"><span>Full dessert tables, grazing boxes &amp; themed party sets</span><span class="font-bold text-pink-600 text-right shrink-0">Custom quote</span></li></ul><p class="text-xs text-plumSoft mt-2">Contact us for your date, guest count &amp; theme for a full quote.</p></div></div>
+        <div class="bg-white rounded-2xl shadow-card overflow-hidden reveal"><button class="accordion-btn w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false"><span class="flex items-center gap-3 font-bold text-plum"><span class="text-2xl">🎄</span> Seasonal Specials</span><svg class="chevron w-5 h-5 text-pink-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button><div class="accordion-panel hidden px-6 pb-6"><ul class="divide-y divide-pink-100 text-sm"><li class="flex justify-between py-2.5 gap-4"><span>Valentine's, Easter, Christmas &amp; holiday exclusives</span><span class="font-bold text-pink-600 text-right shrink-0">Rotates seasonally</span></li></ul><p class="text-xs text-plumSoft mt-2">Check back for seasonal specials throughout the year!</p></div></div>
       </div>
     </div>
   </section>
@@ -625,27 +321,11 @@
   <!-- How to Order -->
   <section id="order" class="py-20 sm:py-28 bg-cream">
     <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center max-w-xl mx-auto reveal">
-        <span class="font-script text-2xl text-rosegoldDk">Simple as pie (or cake)</span>
-        <h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Sweet in 3 steps</h2>
-      </div>
-
+      <div class="text-center max-w-xl mx-auto reveal"><span class="font-script text-2xl text-rosegoldDk">Simple as pie (or cake)</span><h2 class="mt-2 font-script text-4xl sm:text-5xl text-plum">Sweet in 3 steps</h2></div>
       <div class="mt-14 grid sm:grid-cols-3 gap-8">
-        <div class="reveal text-center px-4">
-          <div class="mx-auto w-16 h-16 rounded-full bg-pink-500 text-white font-script text-3xl flex items-center justify-center shadow-soft">1</div>
-          <h3 class="mt-5 font-bold text-lg text-plum">Browse or build</h3>
-          <p class="mt-2 text-plumSoft text-sm leading-relaxed">Explore our full menu or use the Build My Treat Box tool to pick your vibe, flavor and treat.</p>
-        </div>
-        <div class="reveal text-center px-4">
-          <div class="mx-auto w-16 h-16 rounded-full bg-pink-500 text-white font-script text-3xl flex items-center justify-center shadow-soft">2</div>
-          <h3 class="mt-5 font-bold text-lg text-plum">Send your order</h3>
-          <p class="mt-2 text-plumSoft text-sm leading-relaxed">Send your selections and we'll confirm pricing, flavors &amp; your pickup date.</p>
-        </div>
-        <div class="reveal text-center px-4">
-          <div class="mx-auto w-16 h-16 rounded-full bg-pink-500 text-white font-script text-3xl flex items-center justify-center shadow-soft">3</div>
-          <h3 class="mt-5 font-bold text-lg text-plum">Pick up fresh treats</h3>
-          <p class="mt-2 text-plumSoft text-sm leading-relaxed">Swing by at your scheduled time to collect your treats, fresh and beautifully packed.</p>
-        </div>
+        <div class="reveal text-center px-4"><div class="mx-auto w-16 h-16 rounded-full bg-pink-500 text-white font-script text-3xl flex items-center justify-center shadow-soft">1</div><h3 class="mt-5 font-bold text-lg text-plum">Browse or build</h3><p class="mt-2 text-plumSoft text-sm leading-relaxed">Explore our full menu or use the Build My Treat Box tool to pick your vibe, flavor and treat.</p></div>
+        <div class="reveal text-center px-4"><div class="mx-auto w-16 h-16 rounded-full bg-pink-500 text-white font-script text-3xl flex items-center justify-center shadow-soft">2</div><h3 class="mt-5 font-bold text-lg text-plum">Send your order</h3><p class="mt-2 text-plumSoft text-sm leading-relaxed">Send your selections and we'll confirm pricing, flavors &amp; your pickup date.</p></div>
+        <div class="reveal text-center px-4"><div class="mx-auto w-16 h-16 rounded-full bg-pink-500 text-white font-script text-3xl flex items-center justify-center shadow-soft">3</div><h3 class="mt-5 font-bold text-lg text-plum">Pick up fresh treats</h3><p class="mt-2 text-plumSoft text-sm leading-relaxed">Swing by at your scheduled time to collect your treats, fresh and beautifully packed.</p></div>
       </div>
     </div>
   </section>
@@ -656,37 +336,21 @@
       <span class="text-5xl">🎂</span>
       <h2 class="mt-4 font-script text-5xl sm:text-6xl text-pink-700">Let's get baking</h2>
       <p class="mt-4 text-plumSoft max-w-md mx-auto">Ready to order or still deciding? We'd love to hear from you — we love talking treats.</p>
-
       <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#order" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:brightness-95 text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-all hover:-translate-y-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C22 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.32-1.94 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.17-.2.73-.85.93-1.15.2-.29.4-.24.65-.15.26.1 1.68.79 1.97.94.28.14.47.21.54.33.07.13.07.72-.17 1.4Z"/></svg>
-          Order Now
-        </a>
+        <a href="#order" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:brightness-95 text-white font-bold px-8 py-3.5 rounded-full shadow-soft transition-all hover:-translate-y-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C22 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.32-1.94 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.17-.2.73-.85.93-1.15.2-.29.4-.24.65-.15.26.1 1.68.79 1.97.94.28.14.47.21.54.33.07.13.07.72-.17 1.4Z"/></svg> Order Now</a>
       </div>
-
-      <p class="mt-8 flex items-center justify-center gap-2 text-plumSoft text-sm font-semibold">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 shrink-0">
-          <path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 6.6 11.1 7.4 11.8.3.3.9.3 1.2 0C13.4 21.1 20 15.4 20 10c0-4.4-3.6-8-8-8Zm0 10.5A2.5 2.5 0 1 1 12 7.5a2.5 2.5 0 0 1 0 5Z"/>
-        </svg>
-        Home-Baked with Love
-      </p>
-
+      <p class="mt-8 flex items-center justify-center gap-2 text-plumSoft text-sm font-semibold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 shrink-0"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 6.6 11.1 7.4 11.8.3.3.9.3 1.2 0C13.4 21.1 20 15.4 20 10c0-4.4-3.6-8-8-8Zm0 10.5A2.5 2.5 0 1 1 12 7.5a2.5 2.5 0 0 1 0 5Z"/></svg> Home-Baked with Love</p>
       <p class="mt-2 font-script text-2xl text-pink-700">Made with love, one bite at a time 💕</p>
-
-      <div class="mt-10 pt-6 border-t border-pink-300/60 text-xs text-plumSoft">
-        © 2026 Sweet Delights Bakery. All rights reserved.
-      </div>
+      <div class="mt-10 pt-6 border-t border-pink-300/60 text-xs text-plumSoft">© 2026 Sweet Delights Bakery. All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
     // Mobile nav toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const iconOpen = document.getElementById('iconOpen');
     const iconClose = document.getElementById('iconClose');
-
     menuToggle.addEventListener('click', () => {
       const isOpen = !mobileMenu.classList.contains('hidden');
       mobileMenu.classList.toggle('hidden');
@@ -694,7 +358,6 @@
       iconClose.classList.toggle('hidden');
       menuToggle.setAttribute('aria-expanded', String(!isOpen));
     });
-
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
@@ -729,7 +392,6 @@
     const boxState = { vibe: null, flavor: null, treat: null };
     let currentStep = 1;
     const totalSteps = 4;
-
     const panels = document.querySelectorAll('.box-step');
     const dots = document.querySelectorAll('.step-dot .dot');
     const connectors = document.querySelectorAll('.connector');
@@ -737,21 +399,15 @@
     const nextBtn = document.getElementById('nextBtn');
     const boxNavButtons = document.getElementById('boxNavButtons');
 
-    function stepKey(step) {
-      return step === 1 ? 'vibe' : step === 2 ? 'flavor' : step === 3 ? 'treat' : null;
-    }
+    function stepKey(step) { return step === 1 ? 'vibe' : step === 2 ? 'flavor' : step === 3 ? 'treat' : null; }
 
     function updateProgressUI() {
       dots.forEach((dot, i) => {
         const stepNum = i + 1;
         dot.classList.remove('bg-pink-500', 'border-pink-500', 'text-white', 'border-pink-200', 'text-pink-300', 'bg-white');
-        if (stepNum < currentStep) {
-          dot.classList.add('bg-pink-500', 'border-pink-500', 'text-white');
-        } else if (stepNum === currentStep) {
-          dot.classList.add('bg-white', 'border-pink-500', 'text-pink-600');
-        } else {
-          dot.classList.add('bg-white', 'border-pink-200', 'text-pink-300');
-        }
+        if (stepNum < currentStep) { dot.classList.add('bg-pink-500', 'border-pink-500', 'text-white'); } 
+        else if (stepNum === currentStep) { dot.classList.add('bg-white', 'border-pink-500', 'text-pink-600'); } 
+        else { dot.classList.add('bg-white', 'border-pink-200', 'text-pink-300'); }
       });
       connectors.forEach((c, i) => {
         c.classList.toggle('bg-pink-500', i + 1 < currentStep);
@@ -789,38 +445,17 @@
       refreshNextButton();
     }
 
-    document.querySelectorAll('.vibe-opt').forEach(btn => {
-      btn.addEventListener('click', () => selectOption('.vibe-opt', 'vibe', btn.dataset.value, btn));
-    });
-    document.querySelectorAll('.flavor-opt').forEach(btn => {
-      btn.addEventListener('click', () => selectOption('.flavor-opt', 'flavor', btn.dataset.value, btn));
-    });
-    document.querySelectorAll('.treat-opt').forEach(btn => {
-      btn.addEventListener('click', () => selectOption('.treat-opt', 'treat', btn.dataset.value, btn));
-    });
+    document.querySelectorAll('.vibe-opt').forEach(btn => btn.addEventListener('click', () => selectOption('.vibe-opt', 'vibe', btn.dataset.value, btn)));
+    document.querySelectorAll('.flavor-opt').forEach(btn => btn.addEventListener('click', () => selectOption('.flavor-opt', 'flavor', btn.dataset.value, btn)));
+    document.querySelectorAll('.treat-opt').forEach(btn => btn.addEventListener('click', () => selectOption('.treat-opt', 'treat', btn.dataset.value, btn)));
 
-    nextBtn.addEventListener('click', () => {
-      if (nextBtn.disabled) return;
-      if (currentStep < totalSteps) {
-        currentStep++;
-        showStep(currentStep);
-      }
-    });
-
-    backBtn.addEventListener('click', () => {
-      if (currentStep > 1) {
-        currentStep--;
-        showStep(currentStep);
-      }
-    });
+    nextBtn.addEventListener('click', () => { if (!nextBtn.disabled && currentStep < totalSteps) { currentStep++; showStep(currentStep); } });
+    backBtn.addEventListener('click', () => { if (currentStep > 1) { currentStep--; showStep(currentStep); } });
 
     document.getElementById('startOverBtn').addEventListener('click', () => {
-      boxState.vibe = null;
-      boxState.flavor = null;
-      boxState.treat = null;
+      boxState.vibe = null; boxState.flavor = null; boxState.treat = null;
       document.querySelectorAll('.option-card').forEach(b => b.classList.remove('selected'));
-      currentStep = 1;
-      showStep(currentStep);
+      currentStep = 1; showStep(currentStep);
       document.getElementById('build-box').scrollIntoView({ behavior: 'smooth' });
     });
 
@@ -828,22 +463,11 @@
       const orderNum = 'SD-' + Math.floor(1000 + Math.random() * 9000);
       const today = new Date();
       const dateStr = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-
       document.getElementById('ticketNumber').textContent = orderNum;
       document.getElementById('ticketDate').textContent = dateStr;
       document.getElementById('ticketVibe').textContent = boxState.vibe || '—';
       document.getElementById('ticketFlavor').textContent = boxState.flavor || '—';
       document.getElementById('ticketTreat').textContent = boxState.treat || '—';
-
-      const message =
-        `Hi! 🎀%0A` +
-        `I'd love to place this order:%0A` +
-        `— Order #: ${orderNum}%0A` +
-        `— Vibe: ${boxState.vibe || 'N/A'}%0A` +
-        `— Flavor: ${boxState.flavor || 'N/A'}%0A` +
-        `— Treat: ${boxState.treat || 'N/A'}%0A` +
-        `Can you confirm pricing &amp; pickup date? Thank you! 💕`;
-
       document.getElementById('sendOrderBtn').href = `#order`;
     }
 
